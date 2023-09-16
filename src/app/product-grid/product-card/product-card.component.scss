@@ -1,0 +1,100 @@
+.mat-card {
+    height: 400px;
+    width: 360px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.product-image-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    scale: 60%;
+    top: -80px;
+    // overflow: hidden;
+    .product-image {
+        max-height: 300px;
+        max-width: 400px;
+        transition: transform 0.3s ease;
+        /* Adjust the duration and timing function as needed */
+    }
+    .zoomed {
+        transform: scale(1.2);
+        /* Adjust the zoom level (1.1 for 10% zoom) */
+    }
+}
+
+.mat-card-header {
+    z-index: 1;
+    .discount-banner-body {
+        background-color: whitesmoke;
+        height: 60px;
+        width: 60px;
+        border-radius: 20px;
+        .discount-text {
+            display: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
+
+.material-symbols-rounded {
+    font-variation-settings: 'FILL' 1, 'wght' 100, 'GRAD' -25, 'opsz' 48
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.add-button-body {
+    z-index: 1;
+    background-color: whitesmoke;
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    position: absolute;
+    left: 290px;
+    top: 10px;
+    cursor: pointer;
+    .add-icon {
+        position: relative;
+        left: 18px;
+        top: 16px;
+        cursor: pointer;
+        scale: 2;
+    }
+}
+
+.product-info-body {
+    //margin: 10px;
+    z-index: 1;
+    background-color: whitesmoke;
+    min-height: 110px;
+    width: 340px;
+    border-radius: 20px;
+    position: relative;
+    top: -94px;
+    .product-info-content {
+        padding: 20px;
+        .product-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: 36px;
+            position: relative;
+            .product-price {
+                display: flex;
+                .original-price {
+                    text-decoration: line-through;
+                }
+            }
+            .prodcut-rating {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}

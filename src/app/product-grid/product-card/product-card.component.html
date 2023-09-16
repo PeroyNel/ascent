@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,-25" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<mat-card class="mat-card">
+    <div class="mat-card-header">
+        <div class="discount-banner-body">
+            <mat-card-content class="discount-text">{{product.discountPercentage}}</mat-card-content>
+        </div>
+        <div class="add-button-body" (click)="openSnackBar(product.productName)" (click)="addProductToCart(product.id)">
+            <span class="material-symbols-rounded add-icon">
+                add
+            </span>
+        </div>
+    </div>
+
+    <div class="product-image-div">
+        <img class="product-image" (mouseover)="zoomIn()" (mouseout)="zoomOut()" src="{{product.productImageURL}}" [class.zoomed]="isZoomed">
+    </div>
+
+    <div class="product-info-body">
+        <div class="product-info-content">
+            <div>{{product.productName}}</div>
+            <div class="product-price-row">
+                <div class="product-price">
+                    <div class="current-price">{{product.currentPrice}}</div>
+                    <div class="original-price">{{product.fullPrice}}</div>
+                </div>
+                <div class="prodcut-rating">
+                    <span class="material-symbols-rounded">
+                        grade
+                        </span>
+                    <div>4.9 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,23 @@
+.toolbar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.badge {
+    z-index: 1;
+}
+
+.toolbar {
+    background-color: white;
+    margin-bottom: 20px;
+    max-height: 130px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.demo-section+.demo-section {
+    margin-top: 16px;
+}

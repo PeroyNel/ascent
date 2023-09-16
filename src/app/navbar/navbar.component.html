@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,-25" />
+<div class="toolbar-wrapper">
+    <mat-toolbar class="toolbar">
+        <button mat-icon-button class="example-icon" (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+        <span>Ascent</span>
+        <span class="spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon">
+    <mat-icon (click)="openDialog()" class="badge" *ngIf="cartItemCount > 0" matBadge="{{cartItemCount}}" matBadgeColor="warn" aria-hidden="false">shopping_cart</mat-icon>
+    <mat-icon *ngIf="cartItemCount === 0" aria-hidden="false">shopping_cart</mat-icon>
+  </button>
+    </mat-toolbar>
+</div>
+
+
+<router-outlet></router-outlet>
