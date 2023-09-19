@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div *ngIf="isOpen" class="cart-wrapper" (click)="toggleCart()">
+    <div class="cart-content h1">
+        <div class="empty-cart" *ngIf="matchingProducts.length < 1">
+            <div>Your cart is empty</div>
+        </div>
+        <div *ngFor="let product of matchingProducts; let i = index" class="product-card">
+            <div class="img-wrapper">
+                <img class="product-image" (mouseover)="zoomIn(i)" (mouseout)="zoomOut(i)" [class.zoomed]="isZoomed[i]" src="{{product.productImageURL}}">
+            </div>
+            <div class="product-info">
+                <div class="product-name h1">{{ product.productName }}</div>
+                <div class="price-delete-row">
+                    <div class="current-price h2">
+                        R{{ product.currentPrice }}
+                    </div>
+                    <span class="material-symbols-outlined delete-button" (click)="removeItem(i, $event)">
+                        delete
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="totalValue > 0" class="total h2">
+            Total: R{{totalValue}}
+        </div>
+    </div>
+</div>

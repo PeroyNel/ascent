@@ -21,7 +21,116 @@ $ascent-theme: mat.define-light-theme(( color: ( primary: $ascent-primary, accen
 // that you are using.
 @include mat.all-component-themes($ascent-theme);
 
-/* You can add global styles to this file, and also import other style files */
+/* Heading/Text Styles */
+
+.h1 {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: inherit;
+}
+
+.h2 {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: inherit;
+}
+
+.h3 {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: inherit;
+}
+
+.strikethrough {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: grey;
+    cursor: inherit;
+}
+
+
+/* Paragraph Style */
+
+.p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px 0;
+}
+
+
+/* Link Styles */
+
+.link {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+
+/* Button Styles */
+
+.button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button:hover {
+    color: rgb(217, 0, 0);
+}
+
+
+/* Border Styles */
+
+.border {
+    border: 1px solid rgb(238, 238, 238);
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 20px !important;
+}
+
+.border-shadow {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Colour Styles */
+
+.gold {
+    color: gold;
+}
+
+
+/* Backdrop Styles */
+
+.transparent-backdrop {
+    background-color: transparent !important;
+}
+
+
+/* Overlay Backdrop Styles */
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 0;
+}
+
+
+/* Background Styles */
+
+.product-info-body:hover {
+    background-color: rgb(237, 237, 237) !important;
+    border: 1px solid rgb(225, 225, 225);
+}
 
 html,
 body {

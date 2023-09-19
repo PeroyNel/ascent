@@ -1,3 +1,3 @@
-<app-navbar [cartItemCount]="cartItemCount"></app-navbar>
-
+<app-navbar (openOverlay)="cart.toggleCart()" [cartItemCount]="cartItemCount"></app-navbar>
+<app-cart #cart></app-cart>
 <router-outlet></router-outlet>

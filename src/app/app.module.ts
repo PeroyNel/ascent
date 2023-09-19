@@ -17,13 +17,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { CartComponent } from './cart/cart.component';
+import { ProductOverlayComponent } from './product-overlay/product-overlay.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
     ProductPageComponent,
     ProductCardComponent,
-    ProductGridComponent
+    ProductGridComponent,
+    CartComponent,
+    ProductOverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +42,6 @@ import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog
     MatBadgeModule,
     MatSnackBarModule,
     MatSidenavModule,
-    MatDialog,
-    MatDialogRef,
     MatDialogModule
   ],
   providers: [],
