@@ -214,7 +214,7 @@ $ascent-theme-dark: mat.define-dark-theme(( color: ( primary: $ascent-primary, a
         border-radius: 20px !important;
     }
     .border-shadow {
-        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 2px 1px -1px rgba(255, 255, 255, 0.1), 0px 1px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 3px 0px rgba(255, 255, 255, 0.1);
     }
     /* Colour Styles */
     .gold {
@@ -298,7 +298,7 @@ body.light-theme {
 }
 
 body.dark-theme {
-    background-color: #111 !important;
+    background-color: #121212 !important;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     color: #ccc;

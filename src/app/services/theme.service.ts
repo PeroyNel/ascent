@@ -1,39 +1,46 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root' // Service provided at the root level
 })
 export class ThemeService {
-  private currentTheme: string = 'light';
+  private currentTheme: string = 'light'; // Private variable to store the current theme.
 
-  constructor(private rendererFactory: RendererFactory2) {}
+  constructor(private rendererFactory: RendererFactory2) {
+    // Injecting the RendererFactory2 service in the constructor.
+  }
 
+  // Creating a private instance of Renderer2 using the injected RendererFactory2.
   private renderer: Renderer2 = this.rendererFactory.createRenderer(null, null);
 
+  // Method to toggle the application theme.
   toggleTheme() {
-    console.log('toggle-theme', );
-    // Remove the old theme class
-  this.renderer.removeClass(document.body, `${this.currentTheme}-theme`);
-  
-  // Toggle between light and dark themes
-  if (this.currentTheme === 'light') {
-    this.currentTheme = 'dark';
-  } else {
-    this.currentTheme = 'light';
-  }
-  
-  // Apply the new theme class
-  this.renderer.addClass(document.body, `${this.currentTheme}-theme`);
+    // Remove the current theme class from the document body.
+    this.renderer.removeClass(document.body, `${this.currentTheme}-theme`);
+    
+    // Toggle between 'light' and 'dark' themes.
+    if (this.currentTheme === 'light') {
+      this.currentTheme = 'dark';
+    } else {
+      this.currentTheme = 'light';
+    }
+    
+    // Apply the updated theme class to the document body.
+    this.renderer.addClass(document.body, `${this.currentTheme}-theme`);
   }
 
+  // Method to apply a specific theme.
   applyTheme(theme: string) {
-    console.log('apply-theme');
-    // Remove the previously applied theme class
+    // Remove the current theme class from the document body.
     this.renderer.removeClass(document.body, `${this.currentTheme}-theme`);
-    // Add the new theme class
+    
+    // Add the specified theme class to the document body.
     this.renderer.addClass(document.body, `${theme}-theme`);
+    
+    // Update the current theme.
     this.currentTheme = theme;
   }
 }
+
 
 

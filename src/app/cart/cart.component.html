@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <div *ngIf="isOpen" class="cart-wrapper cursor-default" (click)="toggleCart()">
-    <div class="cart-content h1 background-white">
+    <div class="cart-content h1 background-white border-shadow">
         <div class="empty-cart" *ngIf="matchingProducts.length < 1">
             <div>Your cart is empty</div>
         </div>

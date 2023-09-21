@@ -1,8 +1,7 @@
-// mock-product.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // Service provided at the root level
 })
 export class MockProductService {
   private data: any[] = [
@@ -1530,13 +1529,13 @@ export class MockProductService {
         ] }
   ];
 
-  getAll() {
-    return this.data;
-  }
-
-  getById(id: number) {
-    return this.data.find(item => item.id === id);
-  }
-
-  // Implement other methods as required
+    // Method to retrieve all data
+    getAll() {
+        return this.data; // Return the entire data collection
+    }
+  
+    // Method to retrieve data by ID
+    getById(id: number) {
+        return this.data.find(item => item.id === id); // Find and return an item by its ID
+    }
 }
