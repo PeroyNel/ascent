@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-<div *ngIf="isOpen" class="cart-wrapper" (click)="toggleCart()">
-    <div class="cart-content h1">
+<div *ngIf="isOpen" class="cart-wrapper cursor-default" (click)="toggleCart()">
+    <div class="cart-content h1 background-white">
         <div class="empty-cart" *ngIf="matchingProducts.length < 1">
             <div>Your cart is empty</div>
         </div>
@@ -15,7 +15,7 @@
                     <div class="current-price h2">
                         R{{ product.currentPrice }}
                     </div>
-                    <span class="material-symbols-outlined delete-button" (click)="removeItem(i, $event)">
+                    <span class="material-symbols-outlined delete-button cursor-pointer" (click)="removeItem(i, $event)">
                         delete
                         </span>
                 </div>

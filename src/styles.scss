@@ -1,135 +1,289 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 $ascent-primary: mat.define-palette(mat.$indigo-palette);
 $ascent-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-// The warn palette is optional (defaults to red).
 $ascent-warn: mat.define-palette(mat.$red-palette);
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+$strikethrough-color: grey;
 $ascent-theme: mat.define-light-theme(( color: ( primary: $ascent-primary, accent: $ascent-accent, warn: $ascent-warn, )));
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($ascent-theme);
-
-/* Heading/Text Styles */
-
-.h1 {
-    font-size: 20px;
-    font-weight: 500;
-    cursor: inherit;
+$ascent-theme-dark: mat.define-dark-theme(( color: ( primary: $ascent-primary, accent: $ascent-accent, warn: $ascent-warn, strikethrough-color: $strikethrough-color)));
+.light-theme {
+    @include mat.all-component-themes($ascent-theme);
+    /* Heading/Text Styles */
+    .h1 {
+        font-size: 20px;
+        font-weight: 500;
+        cursor: inherit;
+    }
+    .h2 {
+        font-size: 18px;
+        font-weight: 500;
+        cursor: inherit;
+    }
+    .h3 {
+        font-size: 14px;
+        font-weight: 500;
+        cursor: inherit;
+    }
+    .strikethrough {
+        font-size: 14px;
+        text-decoration: line-through;
+        color: grey;
+        cursor: inherit;
+    }
+    /* Cursor Style */
+    .cursor-pointer {
+        cursor: pointer;
+    }
+    .cursor-default {
+        cursor: default;
+    }
+    /* Paragraph Style */
+    .p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0;
+    }
+    /* Link Styles */
+    .link {
+        color: #007BFF;
+        text-decoration: underline;
+    }
+    .link:hover {
+        color: #0056b3;
+        text-decoration: none;
+    }
+    /* Button Styles */
+    .button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+    }
+    .button:hover {
+        background-color: #0056b3;
+    }
+    .delete-button:hover {
+        color: rgb(217, 0, 0);
+    }
+    /* Border Styles */
+    .border {
+        border: 1px solid rgb(238, 238, 238);
+    }
+    .review-border {
+        border: 1px solid #ccc;
+    }
+    .mat-mdc-dialog-container .mdc-dialog__surface {
+        border-radius: 20px !important;
+    }
+    .border-shadow {
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    }
+    /* Colour Styles */
+    .gold {
+        color: gold;
+    }
+    .toolbar {
+        background-color: white;
+    }
+    /* Backdrop Styles */
+    .transparent-backdrop {
+        background-color: transparent !important;
+    }
+    /* Overlay Backdrop Styles */
+    .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+        opacity: 0;
+    }
+    /* Background Styles */
+    .background-red {
+        background-color: rgb(249 0 0 / 80%);
+    }
+    .background-white {
+        background-color: white;
+    }
+    .background-whitesmoke {
+        background-color: whitesmoke;
+    }
+    .product-info-body:hover {
+        background-color: rgb(237, 237, 237) !important;
+        border: 1px solid rgb(225, 225, 225);
+    }
+    /* Zoom Styles */
+    .zoomed {
+        transform: scale(1.2);
+    }
+    .mat-mdc-slide-toggle.mat-accent {
+        --mdc-switch-selected-icon-color: #fff;
+        --mdc-switch-unselected-focus-handle-color: #212121;
+        --mdc-switch-unselected-focus-state-layer-color: #424242;
+        --mdc-switch-unselected-focus-track-color: #e0e0e0;
+        --mdc-switch-unselected-handle-color: #616161;
+        --mdc-switch-unselected-hover-handle-color: #212121;
+        --mdc-switch-unselected-hover-state-layer-color: #424242;
+        --mdc-switch-unselected-hover-track-color: #e0e0e0;
+        --mdc-switch-unselected-icon-color: #fff;
+        --mdc-switch-unselected-pressed-handle-color: #212121;
+        --mdc-switch-unselected-pressed-state-layer-color: #424242;
+        --mdc-switch-unselected-pressed-track-color: #e0e0e0;
+        --mdc-switch-unselected-track-color: #e0e0e0;
+    }
 }
 
-.h2 {
-    font-size: 18px;
-    font-weight: 500;
-    cursor: inherit;
-}
-
-.h3 {
-    font-size: 14px;
-    font-weight: 500;
-    cursor: inherit;
-}
-
-.strikethrough {
-    font-size: 14px;
-    text-decoration: line-through;
-    color: grey;
-    cursor: inherit;
-}
-
-
-/* Paragraph Style */
-
-.p {
-    font-size: 16px;
-    line-height: 24px;
-    margin: 16px 0;
-}
-
-
-/* Link Styles */
-
-.link {
-    color: #007BFF;
-    text-decoration: underline;
-}
-
-.link:hover {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-
-/* Button Styles */
-
-.button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-.delete-button:hover {
-    color: rgb(217, 0, 0);
-}
-
-
-/* Border Styles */
-
-.border {
-    border: 1px solid rgb(238, 238, 238);
-}
-
-.mat-mdc-dialog-container .mdc-dialog__surface {
-    border-radius: 20px !important;
-}
-
-.border-shadow {
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-
-/* Colour Styles */
-
-.gold {
-    color: gold;
-}
-
-
-/* Backdrop Styles */
-
-.transparent-backdrop {
-    background-color: transparent !important;
-}
-
-
-/* Overlay Backdrop Styles */
-
-.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
-    opacity: 0;
-}
-
-
-/* Background Styles */
-
-.product-info-body:hover {
-    background-color: rgb(237, 237, 237) !important;
-    border: 1px solid rgb(225, 225, 225);
+.dark-theme {
+    @include mat.all-component-themes($ascent-theme-dark);
+    /* Heading/Text Styles */
+    .h1 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        /* White text color */
+        cursor: inherit;
+    }
+    .h2 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        /* White text color */
+        cursor: inherit;
+    }
+    .h3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        /* White text color */
+        cursor: inherit;
+    }
+    .strikethrough {
+        font-size: 14px;
+        text-decoration: line-through;
+        color: grey;
+        /* Reddish text color for strikethrough */
+        cursor: inherit;
+    }
+    /* Cursor Style */
+    .cursor-pointer {
+        cursor: pointer;
+    }
+    .cursor-default {
+        cursor: default;
+    }
+    /* Paragraph Style */
+    .p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0;
+        color: #ccc;
+        /* Light gray text color */
+    }
+    /* Link Styles */
+    .link {
+        color: #1e90ff;
+        /* Dark blue link color */
+        text-decoration: underline;
+    }
+    .link:hover {
+        color: #3e82f7;
+        /* Lighter blue on hover */
+        text-decoration: none;
+    }
+    /* Button Styles */
+    .button {
+        background-color: #1e90ff;
+        /* Dark blue button background */
+        color: #fff;
+        border: none;
+        font-weight: bold;
+    }
+    .button:hover {
+        background-color: #3e82f7;
+        /* Lighter blue on hover */
+    }
+    .delete-button:hover {
+        color: #ff4747;
+        /* Reddish color on hover */
+    }
+    /* Border Styles */
+    .border {
+        border: 1px solid #444;
+        /* Dark gray border */
+    }
+    .review-border {
+        border: 1px solid white;
+        /* Dark gray border */
+    }
+    .mat-mdc-dialog-container .mdc-dialog__surface {
+        border-radius: 20px !important;
+    }
+    .border-shadow {
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    }
+    /* Colour Styles */
+    .gold {
+        color: gold;
+    }
+    .toolbar {
+        background-color: #333;
+    }
+    .user-review {
+        color: white;
+    }
+    .product-info-text {
+        color: white;
+    }
+    /* Backdrop Styles */
+    .transparent-backdrop {
+        background-color: transparent !important;
+    }
+    /* Overlay Backdrop Styles */
+    .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+        opacity: 0;
+    }
+    /* Background Styles */
+    .background-red {
+        background-color: #ff3131;
+        /* Dark red background */
+    }
+    .background-white {
+        background-color: #333;
+        /* Dark gray background */
+    }
+    .background-whitesmoke {
+        background-color: #222;
+        /* Even darker gray background */
+    }
+    .product-info-body:hover {
+        background-color: #444 !important;
+        /* Dark gray on hover */
+        border: 1px solid #333;
+        /* Slightly lighter gray border on hover */
+    }
+    /* Zoom Styles */
+    .zoomed {
+        transform: scale(1.2);
+    }
+    .mat-mdc-slide-toggle.mat-accent {
+        --mdc-switch-selected-focus-state-layer-color: #333;
+        /* Dark Gray */
+        --mdc-switch-selected-handle-color: #fff;
+        /* Dark Gray */
+        --mdc-switch-selected-hover-state-layer-color: #f0f0f0;
+        /* Dark Gray */
+        --mdc-switch-selected-pressed-state-layer-color: #a1a1a1;
+        /* Dark Gray */
+        --mdc-switch-selected-focus-handle-color: #fff;
+        /* Slightly lighter gray */
+        --mdc-switch-selected-hover-handle-color: #fff;
+        /* Slightly lighter gray */
+        --mdc-switch-selected-pressed-handle-color: #a1a1a1;
+        /* Slightly lighter gray */
+        --mdc-switch-selected-focus-track-color: #a1a1a1;
+        /* Even darker gray */
+        --mdc-switch-selected-hover-track-color: #a1a1a1;
+        /* Even darker gray */
+        --mdc-switch-selected-pressed-track-color: #a1a1a1;
+        /* Even darker gray */
+        --mdc-switch-selected-track-color: #a1a1a1;
+        /* Even darker gray */
+    }
 }
 
 html,
@@ -137,8 +291,15 @@ body {
     height: 100%;
 }
 
-body {
+body.light-theme {
     background-color: #f4f4f4;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body.dark-theme {
+    background-color: #111 !important;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: #ccc;
 }

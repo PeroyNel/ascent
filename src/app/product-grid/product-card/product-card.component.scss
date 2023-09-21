@@ -7,7 +7,6 @@
 
 .card-body {
     cursor: default;
-    background-color: white;
     height: 400px;
     width: 360px;
     padding: 10px;
@@ -29,19 +28,12 @@
         max-height: 300px;
         max-width: 400px;
         transition: transform 0.3s ease;
-        /* Adjust the duration and timing function as needed */
-    }
-    .zoomed {
-        transform: scale(1.2);
-        /* Adjust the zoom level (1.1 for 10% zoom) */
     }
 }
 
 .mat-card-header {
     z-index: 1;
     .discount-banner-body {
-        background-color: rgb(249 0 0 / 80%);
-        // background-color: whitesmoke;
         height: 60px;
         width: 60px;
         border-radius: 40px;
@@ -68,28 +60,22 @@
 
 .add-button-body {
     z-index: 1;
-    //background-color: whitesmoke;
     height: 60px;
     width: 60px;
     border-radius: 20px;
     position: absolute;
     left: 290px;
     top: 10px;
-    cursor: pointer;
     .add-icon {
         position: relative;
         left: 18px;
         top: 18px;
-        cursor: pointer;
         scale: 2;
     }
 }
 
 .product-info-body {
-    cursor: pointer;
-    // border: 1px solid rgb(238, 238, 238);
     z-index: 1;
-    background-color: whitesmoke;
     min-height: 108px;
     width: 338px;
     border-radius: 20px;

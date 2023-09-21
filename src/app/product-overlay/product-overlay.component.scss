@@ -1,13 +1,10 @@
 .product-overlay-body {
     padding: 20px;
-    background: transparent;
     height: 600px;
     width: auto;
     max-width: 600px;
-    //padding: 20px;
     display: grid;
     grid-template-columns: 1fr;
-    /* A single column layout */
     gap: 20px;
     overflow: hidden;
     .product-overlay-content {
@@ -16,61 +13,37 @@
 }
 
 .product-hero {
-    // height: 300px;
-    // width: 300px;
-    // display: flex;
     .product-info-text {
         padding: 20px;
         height: 100%;
         border-radius: 20px;
-        //min-width: 100%;
-        background-color: whitesmoke;
     }
 }
 
-.read-more {
-    cursor: pointer;
-}
+.read-more {}
 
-.read-less {
-    cursor: pointer;
-}
+.read-less {}
 
 .review-box {
     margin-top: 20px;
     border-radius: 20px;
-    border: 1px solid #ccc;
     padding: 15px;
     width: auto;
-    /* Set width to auto */
     max-width: 100%;
-    /* Ensure it doesn't exceed the parent's width */
     display: flex;
     flex-direction: column;
-    /* Optionally, if you want content stacked vertically */
 }
 
 .product-image-div {
     margin-bottom: 20px;
-    // position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 100%;
-    //top: -80px;
-    // overflow: hidden;
     .product-image {
         width: 100%;
-        max-height: 300px;
+        max-height: 400px;
         max-width: 300px;
-        // max-height: 200px;
-        // max-width: 300px;
-        // transition: transform 0.3s ease;
-        /* Adjust the duration and timing function as needed */
-    }
-    .zoomed {
-        transform: scale(1.2);
-        /* Adjust the zoom level (1.1 for 10% zoom) */
     }
 }
 
@@ -87,14 +60,31 @@
     margin-bottom: 10px;
 }
 
-.user-name {
-    font-weight: bold;
-    margin-right: 10px;
+.rating-text {
+    display: flex;
+}
+
+.review-text {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .user-rating {
-    color: #FFD700;
-    /* Use a color that represents the rating, e.g., gold for stars */
+    align-items: center;
+    display: flex;
+}
+
+.user-name {
+    margin-right: 10px;
+}
+
+.user-rating-stars {
+    font-size: 22px;
+    bottom: 3px;
+    position: relative;
+    padding-left: 10px
 }
 
 .user-review {

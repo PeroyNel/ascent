@@ -12,7 +12,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1400, 
         rating: '4.1',
-        productImageURL: 'https://tse2.mm.bing.net/th?id=OIP.vgEWJR6D56YaPHjFGxxIaAHaGs&pid=Api&P=0&h=300.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101958.png',
         specifications: 
             {
                 overview: 'The PulseTech SonicWave headphones are high-quality, over-ear wired headphones designed to deliver exceptional audio clarity and comfort for an immersive listening experience.',
@@ -112,7 +112,7 @@ export class MockProductService {
         currentPrice: 1308, 
         fullPrice: 1800, 
         rating: '4.9',
-        productImageURL: 'https://th.bing.com/th/id/OIP.fCwAuDIOubC0vKN8eqZ8-QHaHa?pid=ImgDet&rs=1.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101920.png',
         specifications: {
             overview: 'The HarmoniX AcoustiSync Elite headphones offer an outstanding wireless audio experience with advanced features for music lovers on the go.',
             keyFeatures: [
@@ -320,7 +320,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.3',
-        productImageURL: 'https://tse1.mm.bing.net/th?id=OIP.ZAE4bglxrqt9mg8pUFP8cwHaF7&pid=Api&P=0&h=300.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101981.png',
         specifications: {
             overview: 'Presenting the VirtuAudio TempoTunes Ultra headphones, engineered to provide exceptional audio fidelity and durability for music enthusiasts and professionals alike.',
             keyFeatures: [
@@ -421,7 +421,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.8',
-        productImageURL: 'https://th.bing.com/th/id/R.774f187bc09f94520feddbf8b579e744?rik=8sxknwRm1QB71g&pid=ImgRaw&r=0.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG7642.png',
         specifications: {
             overview: 'Introducing the NovaWave CelestialTunes Max headphones, designed for audiophiles and music enthusiasts who demand premium sound quality and timeless style.',
             keyFeatures: [
@@ -521,7 +521,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '3.7',
-        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101920.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG7622.png',
         specifications: 
             {
                 overview: 'The AuralFusion FusionSync Pro headphones are high-quality, over-ear wired headphones designed to deliver exceptional audio clarity and comfort for an immersive listening experience.',
@@ -828,7 +828,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.7',
-        productImageURL: 'https://freepngimg.com/download/headphones/30039-3-headphones-transparent.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101946.png',
         specifications: {
             overview: 'Presenting the PulseFlow SonicAura Supreme headphones, engineered to provide exceptional audio fidelity and durability for music enthusiasts and professionals alike.',
             keyFeatures: [
@@ -1029,7 +1029,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.3',
-        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101981.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG7658.png',
         specifications: 
             {
                 overview: 'The SoundSculptor PulseWave headphones are high-quality, over-ear wired headphones designed to deliver exceptional audio clarity and comfort for an immersive listening experience.',
@@ -1129,7 +1129,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.9',
-        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101950.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101968.png',
         specifications: {
             overview: 'The SonicCraft VirtuWave Prodigy headphones offer an outstanding wireless audio experience with advanced features for music lovers on the go.',
             keyFeatures: [
@@ -1237,7 +1237,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.7',
-        productImageURL: 'https://th.bing.com/th/id/R.cbef05c52debdf0ae480a14153b16024?rik=lWTJVcYVlRxHWA&riu=http%3a%2f%2fwww.officialpsds.com%2fimages%2fthumbs%2fDJ-HEADPHONES-psd23114.png&ehk=INV4o6V5asyye1On95AegTaICYllY%2bAAJp5JNkWXzJk%3d&risl=&pid=ImgRaw&r=0',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101931.png',
         specifications: {
             overview: 'Introducing the CelestialSound EchoZenith Elite headphones, a timeless choice for audiophiles seeking high-quality wired audio performance.',
             keyFeatures: [
@@ -1336,7 +1336,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.5',
-        productImageURL: 'https://th.bing.com/th/id/OIF.33ku0GdCDMbu1AiWUlrnNw?pid=ImgDet&rs=1.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG7653.png',
         specifications: {
             overview: 'Presenting the PulseFusion NovaSync Harmony headphones, engineered to provide exceptional audio fidelity and durability for music enthusiasts and professionals alike.',
             keyFeatures: [
@@ -1436,7 +1436,7 @@ export class MockProductService {
         currentPrice: 700, 
         fullPrice: 1100, 
         rating: '4.7',
-        productImageURL: 'https://th.bing.com/th/id/OIF.DT2uirIYcVMPeCxyjh5j6Q?pid=ImgDet&rs=1.png',
+        productImageURL: 'https://pngimg.com/uploads/headphones/headphones_PNG101982.png',
         specifications: {
             overview: 'Introducing the AudioNova ZenSculptor Pro headphones, designed for audiophiles and music enthusiasts who demand premium sound quality and timeless style.',
             keyFeatures: [

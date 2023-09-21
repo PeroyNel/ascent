@@ -20,6 +20,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './cart/cart.component';
 import { ProductOverlayComponent } from './product-overlay/product-overlay.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatBadgeModule,
     MatSnackBarModule,
     MatSidenavModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

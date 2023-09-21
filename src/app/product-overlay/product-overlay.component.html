@@ -1,81 +1,13 @@
-<div class="product-overlay-body">
+<div class="product-overlay-body transparent-backdrop">
     <div class="product-overlay-content">
         <div class="product-hero">
             <div class="product-image-div">
                 <img class="product-image" src="{{product.productImageURL}}">
             </div>
-            <div class="product-info-text border">
-                <!-- <div class="specs-wrapper">
-
-                    <h2>{{product.productName}}</h2>
-                    <h3>R {{product.currentPrice}}</h3>
-
-                    <h3>Overview:</h3>
-                    <p>The AudioMax Pro-Wired headphones are high-quality, over-ear wired headphones designed to deliver exceptional audio clarity and comfort for an immersive listening experience.</p>
-
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li><strong>Sound Quality:</strong>
-                            <ul>
-                                <li>40mm dynamic drivers for crisp and balanced audio.</li>
-                                <li>Frequency Response: 20Hz - 20kHz.</li>
-                                <li>Impedance: 32 ohms.</li>
-                                <li>Sensitivity: 105dB/mW.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Comfort and Design:</strong>
-                            <ul>
-                                <li>Soft, cushioned ear cups and an adjustable headband for extended comfort.</li>
-                                <li>Durable construction with a sleek and timeless design.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Cable:</strong>
-                            <ul>
-                                <li>Detachable 3.5mm audio cable for versatile connectivity.</li>
-                                <li>Cable Length: 1.2 meters.</li>
-                                <li>Gold-plated connectors for reliable signal transmission.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Controls:</strong> <br>
-                            <ul>
-                                <li>Inline remote and microphone for hands-free calls and music control (compatible with most smartphones).</li>
-                            </ul>
-                        </li>
-                        <li><strong>Foldable Design:</strong> <br>
-                            <ul>
-                                <li>Compact and foldable for easy storage and portability.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Compatibility:</strong> <br>
-                            <ul>
-                                <li>Universal 3.5mm audio jack for compatibility with a wide range of devices, including smartphones, tablets, and laptops.</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h3>Dimensions and Weight:</h3>
-                    <ul>
-                        <li>Headphones (unfolded): 180mm x 160mm x 75mm (L x W x H)</li>
-                        <li>Weight: 220g (without cable)</li>
-                    </ul>
-
-                    <h3>Package Contents:</h3>
-                    <ul>
-                        <li>AudioMax Pro-Wired headphones</li>
-                        <li>Detachable 3.5mm audio cable</li>
-                        <li>User manual</li>
-                    </ul>
-
-                    <h3>Warranty:</h3>
-                    <p>1-year limited warranty covering manufacturing defects.</p>
-
-                    <p>The AudioMax Pro-Wired headphones provide an excellent audio experience with comfort and versatility. Whether you're at home, on the go, or in the office, these headphones are your perfect companion for high-quality sound and convenience.</p>
-
-                </div> -->
+            <div class="product-info-text border background-whitesmoke">
                 <div>
                     <div class="specs-wrapper">
                         <h2>{{ product.productName }}</h2>
-                        <h3>R {{ product.currentPrice }}</h3>
 
                         <h3>Overview:</h3>
                         <p>{{ product.specifications.overview }}</p>
@@ -114,26 +46,30 @@
 
 
         </div>
-        <div class="review-box" *ngFor="let review of product.reviews">
+        <div class="review-box review-border" *ngFor="let review of product.reviews">
             <div class="user-info">
                 <img class="user-avatar" src="{{review.reviewerAvatarURL}}" alt="User Avatar">
-                <span class="user-name">{{ review.reviewerName }}</span>
-                <span class="user-rating">{{ review.rating }}</span>
-                <span class="user-rating">
-                    &#9733; &#9733; &#9733; &#9733; &#9734;
-                </span>
+                <div class="review-text">
+                    <span class="user-name h2">{{ review.reviewerName }}</span>
+                    <div class="rating-text">
+                        <span class="user-rating h2">{{ review.rating }}</span>
+                        <span class="user-rating-stars gold">
+                            &#9733; &#9733; &#9733; &#9733; &#9734;
+                        </span>
+                    </div>
+                </div>
             </div>
             <p class="user-review" [ngClass]="{ 'expanded': review.isExpanded }">
                 <ng-container *ngIf="!review.isExpanded; else expandedText">
                     {{ truncateAndTrimText(review.reviewText, 180) }}...
                     <span *ngIf="review.reviewText.length > 180">
-                        <span class="read-more" (click)="review.isExpanded = true">Read More</span>
+                        <span class="read-more h3 cursor-pointer" (click)="review.isExpanded = true">Read More</span>
                     </span>
                 </ng-container>
                 <ng-template #expandedText>
                     {{ review.reviewText }}
                     <span *ngIf="review.reviewText.length > 180">
-                        <span class="read-less" (click)="review.isExpanded = false">Read Less</span>
+                        <span class="read-less h3 cursor-pointer" (click)="review.isExpanded = false">Read Less</span>
                     </span>
                 </ng-template>
             </p>

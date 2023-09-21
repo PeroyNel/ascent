@@ -7,7 +7,9 @@
   </button>
         <span class="h1">Ascent</span>
         <span class="spacer"></span>
+        <mat-slide-toggle (click)="toggleTheme()"></mat-slide-toggle>
         <button (click)="triggerCart()" mat-icon-button class="example-icon favorite-icon">
+          
     <mat-icon class="badge" *ngIf="cartItemCount > 0" matBadge="{{cartItemCount}}" matBadgeColor="warn" aria-hidden="false">shopping_cart</mat-icon>
     <mat-icon *ngIf="cartItemCount === 0" aria-hidden="false">shopping_cart</mat-icon>
   </button>
