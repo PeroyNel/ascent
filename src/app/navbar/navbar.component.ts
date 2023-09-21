@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { CartOverlayService } from '../services/cart-overlay.service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ThemeService } from '../services/theme.service';
-
+import { UserAvatarComponent } from './user-avatar/user-avatar.component';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -22,6 +22,7 @@ import { ThemeService } from '../services/theme.service';
     MatBadgeModule,
     CommonModule,
     MatSlideToggleModule,
+    UserAvatarComponent
   ],
 })
 export class NavbarComponent {

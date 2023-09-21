@@ -21,6 +21,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductOverlayComponent } from './product-overlay/product-overlay.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 @NgModule({
   declarations: [
     AppComponent,

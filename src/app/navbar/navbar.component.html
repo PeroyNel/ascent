@@ -2,11 +2,9 @@
 
 <div class="toolbar-wrapper">
     <mat-toolbar class="toolbar border-shadow">
-        <button mat-icon-button class="example-icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-        <span class="h1">Ascent</span>
+        <span class="navbar-title">Ascent</span>
         <span class="spacer"></span>
+        <app-user-avatar></app-user-avatar>
         <mat-slide-toggle (click)="toggleTheme()"></mat-slide-toggle>
         <button (click)="triggerCart()" mat-icon-button class="example-icon favorite-icon">
           

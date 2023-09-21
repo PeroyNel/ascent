@@ -7,15 +7,15 @@
             <div class="product-info-text border background-whitesmoke">
                 <div>
                     <div class="specs-wrapper">
-                        <h2>{{ product.productName }}</h2>
+                        <h2 class="font-weight-500">{{ product.productName }}</h2>
 
-                        <h3>Overview:</h3>
+                        <h3 class="font-weight-500">Overview:</h3>
                         <p>{{ product.specifications.overview }}</p>
 
-                        <h3>Key Features:</h3>
+                        <h3 class="font-weight-500">Key Features:</h3>
                         <ul>
                             <li *ngFor="let feature of product.specifications.keyFeatures">
-                                <strong>{{ feature.category }}:</strong>
+                                <strong class="font-weight-500">{{ feature.category }}:</strong>
 
                                 <ul>
                                     <br>
@@ -26,17 +26,17 @@
 
                         </ul>
 
-                        <h3>Dimensions and Weight:</h3>
+                        <h3 class="font-weight-500">Dimensions and Weight:</h3>
                         <ul>
                             <li *ngFor="let item of product.specifications.dimensionsAndWeight">{{ item }}</li>
                         </ul>
 
-                        <h3>Package Contents:</h3>
+                        <h3 class="font-weight-500">Package Contents:</h3>
                         <ul>
                             <li *ngFor="let item of product.specifications.packageContents">{{ item }}</li>
                         </ul>
 
-                        <h3>Warranty:</h3>
+                        <h3 class="font-weight-500">Warranty:</h3>
                         <p>{{ product.specifications.warranty }}</p>
 
                         <p>{{ product.specifications.additionalInfo }}</p>

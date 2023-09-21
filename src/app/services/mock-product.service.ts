@@ -108,7 +108,7 @@ export class MockProductService {
         id: 2, 
         productName: 'HarmoniX AcoustiSync Elite', 
         discountPercentage: '30%', 
-        currentPrice: 1308, 
+        currentPrice: 1300, 
         fullPrice: 1800, 
         rating: '4.9',
         productImageURL: './assets/2.png',
